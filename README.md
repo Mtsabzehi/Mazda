@@ -115,7 +115,7 @@
             const password = document.getElementById('password').value.trim();
             const errorDiv = document.getElementById('error-message');
             if (username === 'Ahoora' && password === 'Mazda') {
-                window.location.href = 'https://www.google.com';
+                window.location.href = 'https://mtsabzehi.github.io/Mazda2/';
             } else {
                 errorDiv.textContent = 'The Username or Password is Incorrect. Try again!';
                 errorDiv.style.display = 'block';     
