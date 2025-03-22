@@ -119,7 +119,7 @@
             if (username === 'Ahoora' && password === 'Mazda') {
                 window.location.href = 'https://www.google.com';
             } else {
-                errorDiv.textContent = '❌ The Username or Password is Incorrect. Try again!';
+                errorDiv.textContent = 'The Username or Password is Incorrect. Try again!';
                 errorDiv.style.display = 'block';
                 setTimeout(() => {
                     errorDiv.style.display = 'none';
