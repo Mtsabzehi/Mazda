@@ -5,7 +5,6 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Error Message Style */
         .error-message {
             color: red;
             font-size: 1rem;
@@ -17,7 +16,6 @@
             display: none;
         }
 
-        /* General Styles */
         * {
             margin: 0;
             padding: 0;
@@ -26,7 +24,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('https://biaupload.com/do.php?imgf=org-0e9bcbfdaed91.jpg') no-repeat center center fixed;
+            background: url('https://biaupload.com/do.php?imgf=org-8323b74512921.jpg') no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
             display: flex;
@@ -35,7 +33,6 @@
             position: relative;
         }
 
-        /* Login Container */
         .login-container {
             background: #000000d7;
             padding: 40px 50px;
@@ -106,12 +103,11 @@
 </head>
 <body>
 
-    <!-- Login Container -->
     <div class="login-container">
         <div class="login-header">
             <img src="https://biaupload.com/do.php?imgf=org-266e94ba85261.png" alt="Logo" class="page-logo">
-            <b style="color: #bbb369;"><h2>Welcome Back</h2></b>
-            <b style="color: #bbb369;"><h1>Please Login To Site</h1></b>
+            <b style="color: #bbb369;"><h1>Welcome Back</h1></b>
+            <b style="color: #bbb369;"><h2>Please Login To Your Account</h2></b>
         </div>
         
         <form id="loginForm">
@@ -135,10 +131,10 @@
             const password = document.getElementById('password').value.trim();
             const errorDiv = document.getElementById('error-message');
 
-            if (username === 'Ahoora' && password === 'mazda') {
-                window.location.href = 'your_next_page.html'; // Redirect if login is correct
+            if (username === 'Ahoora' && password === 'Mazda') {
+                window.location.href = 'https://www.google.com';
             } else {
-                errorDiv.textContent = 'The Username or Password is Incorrect. Try again!';
+                errorDiv.textContent = '❌ The Username or Password is Incorrect. Try again!';
                 errorDiv.style.display = 'block';
                 
                 setTimeout(() => {
