@@ -94,7 +94,7 @@
 <body>
     <div class="login-container">
         <div class="login-header">
-            <img src="https://biaupload.com/do.php?imgf=org-266e94ba85261.png" alt="Logo" class="page-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Faravahar-Gold.svg" alt="Logo" class="page-logo">
             <b style="color: #bbb369;"><h1>Welcome Back</h1></b>
             <b style="color: #bbb369;"><h2>Please Login To Your Account</h2></b>
         </div>
@@ -110,9 +110,8 @@
         </form>
     </div>
     <script>
-        // Login Validation
         document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); 
             const username = document.getElementById('username').value.trim();
             const password = document.getElementById('password').value.trim();
             const errorDiv = document.getElementById('error-message');
