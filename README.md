@@ -22,6 +22,7 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://biaupload.com/do.php?imgf=org-8323b74512921.jpg') no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
             display: flex;
@@ -93,10 +94,9 @@
 <body>
     <div class="login-container">
         <div class="login-header">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Faravahar-Gold.svg" alt="Logo" class="page-logo">
             <b style="color: #bbb369;"><h1>Welcome Back</h1></b>
             <b style="color: #bbb369;"><h2>Please Login To Your Account</h2></b>
-        </div>
+        </div>  
         <form id="loginForm">
             <div class="form-group">
                 <input type="text" id="username" placeholder="Username" required>
@@ -110,7 +110,7 @@
     </div>
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault(); 
+            e.preventDefault();
             const username = document.getElementById('username').value.trim();
             const password = document.getElementById('password').value.trim();
             const errorDiv = document.getElementById('error-message');
@@ -118,7 +118,7 @@
                 window.location.href = 'https://www.google.com';
             } else {
                 errorDiv.textContent = 'The Username or Password is Incorrect. Try again!';
-                errorDiv.style.display = 'block';
+                errorDiv.style.display = 'block';     
                 setTimeout(() => {
                     errorDiv.style.display = 'none';
                 }, 3000);
