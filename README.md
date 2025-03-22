@@ -22,7 +22,6 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('https://biaupload.com/do.php?imgf=org-8323b74512921.jpg') no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
             display: flex;
