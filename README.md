@@ -7,10 +7,10 @@
     <style>
         /* Error Message Style */
         .error-message {
-            color: #bbb369;
-            font-size: 0.9rem;
+            color: red;
+            font-size: 1rem;
             text-align: center;
-            margin: 15px 0;
+            margin-top: 15px;
             padding: 8px;
             border-radius: 4px;
             background: #000000;
@@ -33,59 +33,6 @@
             justify-content: center;
             align-items: center;
             position: relative;
-        }
-
-        /* Security Message Box */
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .message-box {
-            background: #000000e1;
-            border-radius: 12px;
-            padding: 30px;
-            max-width: 400px;
-            width: 90%;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            text-align: center;
-            animation: slideIn 3s ease-out;
-        }
-
-        .message-box h2 {
-            color: #e74c3c;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        .message-box p {
-            color: #333;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-        }
-
-        .btn-ok {
-            background: linear-gradient(135deg, #bbb369 0%, #bbb369 100%);
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.2s ease;
-        }
-
-        .btn-ok:hover {
-            transform: translateY(-2px);
-            background: linear-gradient(135deg, #bbb369 0%, #000000 100%);
         }
 
         /* Login Container */
@@ -145,38 +92,6 @@
             background: linear-gradient(135deg, #bbb369 0%, #000000 100%);
         }
 
-        .forgot-password {
-            display: block;
-            text-align: center;
-            margin: 20px 0;
-            color: #bbb369;
-            font-size: 0.9rem;
-            transition: color 2s ease;
-        }
-
-        .forgot-password:hover {
-            color: rgb(0, 0, 0);
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
-        }
-
-        .social-icon {
-            background: #bbb369;
-            padding: 12px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .social-icon:hover {
-            transform: translateY(-3px);
-        }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -187,46 +102,16 @@
                 transform: translateY(0);
             }
         }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 480px) {
-            .login-container {
-                padding: 30px;
-            }
-            
-            .page-logo {
-                max-width: 180px;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Security Message Overlay -->
-    <div id="overlay">
-        <div class="message-box">
-            <b style="color: #ff0000;"><h1>Attention</h1></b>
-            <b style="color: #bbb369;"><h3>Please turn on your VPN</h3></b>
-            <button class="btn-ok" onclick="closeMessageBox()">OK</button>
-        </div>
-    </div>
 
     <!-- Login Container -->
     <div class="login-container">
         <div class="login-header">
             <img src="https://biaupload.com/do.php?imgf=org-266e94ba85261.png" alt="Logo" class="page-logo">
-            <b style="color: #bbb369;"><h1>Welcome Back</h1></b>
-            <b style="color: #bbb369;"><h2>Please Login To Your Account</h2></b>
+            <b style="color: #bbb369;"><h2>Welcome Back</h2></b>
+            <b style="color: #bbb369;"><h1>Please Login To Site</h1></b>
         </div>
         
         <form id="loginForm">
@@ -237,45 +122,23 @@
                 <input type="password" id="password" placeholder="Password" required>
             </div>
             <button type="submit" class="login-btn">Login</button>
-            <a href="#" class="forgot-password">Forgot Password?</a>
             <div id="error-message" class="error-message"></div>
         </form>
-
-        <div class="social-login">
-            <p style="color: #bbb369;">Or continue with</p>
-            <div class="social-icons">
-                <div class="social-icon google">
-                    <i class="fab fa-google"></i>
-                </div>
-                <div class="social-icon facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script>
-        // Security Message Functionality
-        function closeMessageBox() {
-            document.getElementById('overlay').style.display = 'none';
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('overlay').style.display = 'flex';
-        });
-
         // Login Validation
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
             const errorDiv = document.getElementById('error-message');
 
-            if(username === 'KMZ' && password === 'Delester') {
-                window.location.href = 'https://shop.bodybuilding.com/';
+            if (username === 'Ahoora' && password === 'mazda') {
+                window.location.href = 'your_next_page.html'; // Redirect if login is correct
             } else {
-                errorDiv.textContent ='The Username or Password is Incorrect. Try again!';
+                errorDiv.textContent = 'The Username or Password is Incorrect. Try again!';
                 errorDiv.style.display = 'block';
                 
                 setTimeout(() => {
